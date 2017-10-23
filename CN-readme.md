@@ -201,3 +201,126 @@
 **[⬆ back to top](#table-of-contents)**
 
 ---
+
+## Webfonts
+
+* [ ] **Webfont格式:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) 所有现代浏览器都支持WOFF，WOFF2和TTF。
+  
+> * 📖 [WOFF - Web Open Font Format - Caniuse](http://caniuse.com/#feat=woff). 
+> * 📖 [WOFF 2.0 - Web Open Font Format - Caniuse](http://caniuse.com/#feat=woff2).
+> * 📖 [TTF/OTF - TrueType and OpenType font support](http://caniuse.com/#feat=ttf)
+> * 📖 [Using @font-face - CSS-Tricks](https://css-tricks.com/snippets/css/using-font-face/)
+
+* [ ] **Webfont 尺寸:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Webfont尺寸不超过2 MO（包括所有变体）
+
+**[⬆ back to top](#table-of-contents)**
+---
+## CSS
+
+> **注意:** 大多数前端工作人员可以查看[CSS指南](https://cssguidelin.es/) 和[Sass 指南](https://sass-guidelin.es/)  如果你对css的属性具有疑问，可以查看 [CSS 参考](http://cssreference.io/).
+
+* [ ] **响应式网页设计：** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) 正在使用响应式设计的网站
+* [ ] **CSS 打印样式:** ![中](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png)提供打印样式表，并在每个页面上都是正确的。
+* [ ] **预处理器:** ![中](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) 你的页面中使用预处理器 ([Sass](http://sass-lang.com/) 是首选).
+* [ ] **唯一 ID:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) 如果你使用ID,确保在页面中唯一存在。
+* [ ] **去除基本样式 CSS:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) 使用CSS重置（重置，归一化或重新设置）并进行更新。 *（如果您正在使用像Twitter Bootstrap或Foundation这样的CSS框架，则已经包含了Normalize）。*
+
+> * 📖 [Reset.css](https://meyerweb.com/eric/tools/css/reset/)
+> * 📖 [Normalize.css](https://necolas.github.io/normalize.css/)
+> * 📖 [Reboot](https://v4-alpha.getbootstrap.com/content/reboot/)
+
+* [ ] **JS 前缀:** ![低](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) 所有类（或JavaScript文件中使用的id）以** js - **开头，不会被CSS风格化。
+
+```html
+<div id="js-slider" class="my-slider">
+<!-- Or -->
+<div id="id-used-by-cms" class="js-slider my-slider">
+```
+
+* [ ] **CSS embed or line:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png)尽量避免使用CSS嵌入或内联：仅用于必须的理由（例如：对于滑块背景图像，CSS的关键）
+* [ ] **供应商前缀：** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) 使用CSS供应商前缀，并相应地生成您的浏览器兼容性。
+
+> 🛠 [Autoprefixer CSS online](https://autoprefixer.github.io/)
+
+### Performance
+
+- [ ] **级联:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) CSS文件连接在一个文件中 *(Not for HTTP2)*
+- [ ] **压缩** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) 将所有的css文件缩小。 *(Not for HTTP2)* 
+- [ ] **非阻塞:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) CSS文件需要非阻塞，以防止DOM花费时间加载。
+
+> * 📖 [loadCSS by filament group](https://github.com/filamentgroup/loadCSS)
+
+- [ ] **无用的 CSS:** ![低](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) 移除无用的css。
+
+> * 🛠 [UnCSS Online](https://uncss-online.com/) 🛠
+> * 🛠 [PurifyCSS](https://github.com/purifycss/purifycss)
+
+
+### CSS 测试
+
+* [ ] **Stylelint:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) 所有CSS或SCSS文件没有任何错误。
+
+> * 🛠 [stylelint, a CSS linter](https://stylelint.io/)
+> * 📖 [Sass guidelines](https://sass-guidelin.es/)
+
+* [ ] **响应式网页设计：** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) 所有页面都在以下像素进行测试：320像素，768像素，1024像素（根据您的分析，可以更多/不同）。
+
+* [ ] **CSS验证器：** ![中](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) 测试了CSS，并纠正相关的错误。
+
+> 🛠 [CSS Validator](http://jigsaw.w3.org/css-validator/)
+
+* [ ] **调试CSS：** ![低](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) 页面使用DebugCSS进行测试
+
+> 🛠 [Debug CSS](http://yahoo.github.io/debugCSS) (you can use the bookmarklet)
+
+* [ ] **阅读方式：** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) 如果需要支持不同的阅读方式，则需要对LTR和RTL语言进行测试。
+
+**[⬆ 返回顶部](#table-of-contents)**
+
+---
+## 图片
+
+> **注意:** 要完整了解图像优化，请查看免费电子书**[Essential Image Optimization](https://images.guide/)** 来自Addy Osmani.
+
+### 最佳做法
+* [ ] **优化:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) 所有图像都经过优化，可以在浏览器中呈现。 WebP格式可用于关键页面（如首页）。
+
+> * 🛠 [Imagemin](https://github.com/imagemin/imagemin)
+> * 🛠 Use [ImageOptim](https://imageoptim.com/) to optimise your images for free.
+
+* [ ] **Retina:** ![低](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) 您提供布局图像x2或3x，支持视网膜显示。
+* [ ] **Sprite:** ![中](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) 小图像在一个精灵文件中（在图标的情况下，它们可以在SVG精灵图像中）。
+* [ ] **宽和高:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) 所有``<img>``设置height和width（不要指定px或％）。
+
+> ***注意:*** 许多开发人员假设宽度和高度与响应式网页设计不兼容。 绝对不是这样。
+
+* [ ] **替代文字:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) 所有``<img>``有一个替代的文字，可视化地描述图像。
+* [ ] **懒加载:** ![中](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) 图像是懒加载的（总是提供noscript后备）。
+**[⬆ 返回顶部](#table-of-contents)**
+
+---
+## JavaScript
+
+### 最佳做法
+
+* [ ] **JavaScript内联:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) 代码中没有任何内联的JavaScript代码 (混合着HTML代码).
+* [ ] **级联：** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) JavaScript文件链接。
+* [ ] **压缩:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) JavaScript 文件压缩 (你可以添加``.min``后缀).
+
+> [Minify Resources (HTML, CSS, and JavaScript)](https://developers.google.com/speed/docs/insights/MinifyResources)
+
+* [ ] **非阻塞：** ![中](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) JavaScript文件使用“async”异步加载，或者使用“defer”属性延迟加载。
+
+> 📖 [Remove Render-Blocking JavaScript](https://developers.google.com/speed/docs/insights/BlockingJS)
+
+* [ ] **Modernizr:** ![低](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) 如果您需要定位一些特定功能，您可以使用自定义Modernizr在“<html>”标签中添加类。
+
+> 🛠 [Customize your Modernizr](https://modernizr.com/download?setclasses)
+
+### JavaScript  测试
+
+* [ ] **ESLint:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) ESLint没有标记错误（根据您的配置或标准规则）
+
+**[⬆ 返回顶部](#table-of-contents)**
+
+---

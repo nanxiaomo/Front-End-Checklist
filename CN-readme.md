@@ -324,3 +324,120 @@
 **[⬆ 返回顶部](#table-of-contents)**
 
 ---
+## 性能
+
+### 最佳做法
+
+- [ ] **页面宽度:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) 每个页面宽度在 0ko and 500ko间
+
+> * 🛠 [Website Page Size Online Checker](https://smallseotools.com/website-page-size-checker/)
+> * 📖 [Size Limit: Make the Web lighter](https://evilmartians.com/chronicles/size-limit-make-the-web-lighter)
+
+- [ ] **压缩:** ![中](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) 你的HTML 是压缩过的。
+> 🛠 [W3C Validator](http://validator.w3.org/)
+ 
+* [ ] **懒加载:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) 需要对图像、脚本和CSS进行延迟加载，以改进当前页面的响应时间。 (详见各自的章节).
+
+### Performance testing
+
+* [ ] **Google PageSpeed:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) 所有页面都经过测试（不只是主页），还有最小90/100。
+
+> * 🛠 [Google PageSpeed](https://developers.google.com/speed/pagespeed/insights/)
+> * 🛠 [Test your mobile speed with Google](https://testmysite.withgoogle.com)
+> * 🛠 [WebPagetest - Website Performance and Optimization Test](https://www.webpagetest.org/)
+
+**[⬆ 返回顶部](#table-of-contents)**
+
+---
+## 可访问性
+
+> **注意:** 你可以观看播放列表 [A11ycasts with Rob Dodson](https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g) 📹
+
+### 最佳做法
+
+- [ ] **渐性增强:** ![中](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) 主要功能如主导航和搜索应该在没有JavaScript的情况下工作。
+
+> 📖 [Enable / Disable JavaScript in Chrome Developer Tools](https://www.youtube.com/watch?v=kBmvq2cE0D8)
+
+- [ ] **色彩对比：** ![中](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) 颜色对比度至少应通过WCAG (AAA for mobile)
+
+> 🛠 [Contrast ratio](http://leaverou.github.io/contrast-ratio/)
+
+#### 标题
+
+* [ ] **H1:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) 所有页面都有H1，且不是网站的标题。
+* [ ] **标题:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) 标题应以正确的顺序正确使用（H1至H6）
+
+> 📹 [Why headings and landmarks are so important -- A11ycasts #18](https://www.youtube.com/watch?v=vAAzdi1xuUY&index=9&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
+
+#### Landmarks
+
+- [ ] **Role banner:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) ``<header>`` 有 ``role="banner"``
+- [ ] **Role navigation:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) ``<nav>`` 有 ``role="navigation"``
+- [ ] **Role main:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) ``<main>`` 有 ``role="main"``
+
+> 📖 [Using ARIA landmarks to identify regions of a page](https://www.w3.org/WAI/GL/wiki/Using_ARIA_landmarks_to_identify_regions_of_a_page)
+
+### Semantic语义
+
+- [ ] **使用特定的HTML5输入类型：** 这对于显示移动设备不同类型的自定义键盘和小部件尤其重要。
+
+> 📖 [Mobile Input Types](http://mobileinputtypes.com/)
+
+### 表
+* [ ] **Label:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) 标签与每个输入表单元素相关联。 如果无法显示标签，请改用``aria-label`` 。
+> 📖 [Using the aria-label attribute - MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute)
+
+### 辅助功能测试
+* [ ] **辅助功能标准测试** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) 使用WAVE工具测试您的页面是否符合辅助功能标准。
+
+> 🛠 [Wave testing](http://wave.webaim.org/)
+
+* [ ] **键盘导航:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) 仅以您的键盘测试您的网站，以预见的顺序。 所有交互式元素都可访问和可用。
+* [ ] **屏幕阅读器：** ![中](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) 所有页面都在屏幕阅读器（VoiceOver，ChromeVox，NVDA或Lynx）中进行了测试。
+* [ ] **焦点样式:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) 如果焦点被禁用，它将被CSS中的可见状态所替代。
+
+> 📹 [Managing Focus - A11ycasts #22](https://www.youtube.com/watch?v=srLRSQg6Jgg&index=5&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
+
+**[⬆ 返回顶部](#table-of-contents)**
+
+---
+## SEO
+
+* [ ] **Google Analytics:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Google Analytics（分析）已安装并正确配置。
+* [ ] **标题逻辑** ![中](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) 标题文字有助于了解当前页面中的内容。
+* [ ] **sitemap.xml:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) sitemap.xml已存在，并已在Google Search Console中提交（例如：Google网站管理员工具）
+* [ ] **robots.txt:** ![高](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) robots.txt不阻止网页
+将您的网站链接到Google网站管理员工具
+* [ ] **Sitemap HTML:** ![中](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) 提供HTML网站地图，可通过网站页脚中的链接进行访问。
+
+**[⬆ 返回顶部](#table-of-contents)**
+
+---
+## Contributing
+
+**Open an issue or a pull request to suggest changes or additions.**
+
+
+
+### Contributors
+
+Check out all the super awesome [contributors](https://github.com/thedaviddias/frontendchecklist/graphs/contributors).
+
+## Authors
+
+**[David Dias]()**, **[Geoffrey Signorato](https://github.com/geosenna)**, **[Sandeep Ramgolam](https://twitter.com/__Sun__)** and **[Cédric Poilly](https://github.com/CedricPoilly)**.
+**[王菲], 仅为中文版翻译
+
+## License
+
+[![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+**[⬆ 返回顶部](#table-of-contents)**
+
+
+
+
+
+
+
